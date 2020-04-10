@@ -5,7 +5,6 @@ import os
 import time
 import json
 
-
 class Myhandler(FileSystemEventHandler):
     def on_modified(self, event):
         files = (file for file in os.listdir(folder_track) if os.path.isfile(os.path.join(folder_track, file)))

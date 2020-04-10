@@ -21,7 +21,7 @@ class Myhandler(FileSystemEventHandler):
             elif scr.lower().endswith('.iso'):
                 name_folder = 'ISO Files'
             elif scr.lower().endswith(('.rar', '.zip', '.tar', '.7z')):
-                name_folder = 'Compact Files'
+                name_folder = 'Compacted Files'
             elif scr.lower().endswith(('.py', '.sh', '.ipynb')):
                 name_folder = 'Script Files'
             elif scr.lower().endswith(('.csv')):

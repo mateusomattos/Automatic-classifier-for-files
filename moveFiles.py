@@ -5,13 +5,16 @@ import os
 import time
 import json
 
+
 class Myhandler(FileSystemEventHandler):
     def on_modified(self, event):
         files = (file for file in os.listdir(folder_track) if os.path.isfile(os.path.join(folder_track, file)))
         for file_name in files:
             scr = os.path.join(folder_track, file_name)
 
-            if scr.lower().endswith(('.txt', '.doc','.docx')):
+            if scr.lower().endswith('.opdownload'):
+            	return 1
+            elif scr.lower().endswith(('.txt', '.doc','.docx')):
                 name_folder = 'Text Files'
             elif scr.lower().endswith(('.png', '.jpg','.jpeg')):
                 name_folder = 'Image Files'
@@ -20,7 +23,7 @@ class Myhandler(FileSystemEventHandler):
             elif scr.lower().endswith('.iso'):
                 name_folder = 'ISO Files'
             elif scr.lower().endswith(('.rar', '.zip', '.tar', '.7z')):
-                name_folder = 'Compacted Files'
+                name_folder = 'Compact Files'
             elif scr.lower().endswith(('.py', '.sh', '.ipynb')):
                 name_folder = 'Script Files'
             elif scr.lower().endswith(('.csv')):

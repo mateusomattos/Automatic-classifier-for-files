@@ -5,3 +5,5 @@ A simple automatic classifier for files in a folder. Whenever a new file is plac
 Put the script inside a hidden folder in the home and edit the "folder_track" variable to which folder you whant to track. If desired, you can add new types of folder, just by adding it to the code.
 The idea is to use the code in the background, initializing it at start-up.
 
+To use, put the file "autostart.service" in the folder "/lib/systemd/system/". After, run the command `sudo systemctl start autostart` and `sudo systemctl enable autostart`. 
+

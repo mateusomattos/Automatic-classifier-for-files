@@ -1,0 +1,11 @@
+[Unit]
+Description=Move Files in the Download Folder.
+
+[Service]
+Type=simple
+User=mateusm
+WorkingDirectory=/home/mateusm/.moveFilesDownload
+ExecStart=/usr/bin/python3 /home/mateusm/.moveFilesDownload/moveFiles.py
+
+[Install]
+WantedBy=multi-user.target
